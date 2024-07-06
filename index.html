@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to FontAwesome for icons -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="node-favicon.png" type="image/png">
+</head>
+<body>
+    <div class="dynamic-background"></div> <!-- Dynamic background div -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="node-logo.png" alt="Node.js Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Learn</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Download</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Certification</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Run JavaScript Everywhere</h1>
+            <p>Node.js® is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools, and scripts.</p>
+            <a href="#" class="download-button">Download Node.js (LTS)</a>
+            <p class="version-info">Downloads Node.js v20.15.0<sup>1</sup> with long-term support.<br>
+            Node.js can also be installed via package managers.</p>
+            <a href="#" class="alternative-download">Want new features sooner? Get Node.js v22.4.0<sup>1</sup> instead.</a>
+        </section>
+        <section class="code-snippet">
+            <h2>Create an HTTP Server</h2>
+            <pre>
+                <code class="javascript">
+                    // server.mjs
+                    import { createServer } from 'node:http';
+                    
+                    const server = createServer((req, res) => {
+                        res.writeHead(200, { 'Content-Type': 'text/plain' });
+                        res.end('Hello World!\n');
+                    });
+                    
+                    server.listen(3000, '127.0.0.1', () => {
+                        console.log('Listening on 127.0.0.1:3000');
+                    });
+                </code>
+            </pre>
+            <p>Learn more about what Node.js is able to offer with our <a href="#">Learning materials</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© OpenJS Foundation</p>
+        <div class="footer-links">
+            <a href="#">Trademark Policy</a> | 
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Code of Conduct</a> | 
+            <a href="#">Security Policy</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

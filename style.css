@@ -1,0 +1,224 @@
+/* Base styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #161b22;
+    color: #f5f5f5;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    background: #20232a;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 15px;
+}
+
+.nav-links a {
+    color: #61dafb;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #282c34 30%, #3b4048 100%);
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 15px 0;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #61dafb;
+    color: #20232a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:hover {
+    background-color: #50c7e0;
+    transform: translateY(-3px);
+}
+
+.version-info, .alternative-download {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #9fa4a8;
+}
+
+.alternative-download {
+    color: #61dafb;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.alternative-download:hover {
+    text-decoration: none;
+}
+
+.code-snippet {
+    padding: 30px;
+    background: #20232a;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.code-snippet h2 {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.code-snippet pre {
+    background: #282c34;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.code-snippet code {
+    color: #61dafb;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #20232a;
+    border-top: 1px solid #282c34;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+footer p, .footer-links a {
+    color: #9fa4a8;
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #61dafb;
+    text-decoration: none;
+    margin: 0 3px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Dynamic Background */
+.dynamic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind all other elements */
+    background: linear-gradient(45deg, #ff6f61, #ff9a6e, #ffe171, #c2e59c, #64b3f4, #a0d2db, #ff6fd8);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .download-button {
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 60px 10px;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 0.9em;
+    }
+    .download-button {
+        padding: 8px 16px;
+    }
+    .nav-links li {
+        margin-left: 10px;
+    }
+}
