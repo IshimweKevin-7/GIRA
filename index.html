@@ -3,68 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Node.js Layout</title>
+    <title>GIRA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Link to FontAwesome for icons -->
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" href="node-favicon.png" type="image/png">
+    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
-    <div class="dynamic-background"></div> <!-- Dynamic background div -->
+    <div class="dynamic-background"></div>
     <header>
         <nav>
             <div class="logo">
-                <img src="node-logo.png" alt="Node.js Logo">
+                <img src="logo.png" alt="GIRA Logo">
             </div>
             <ul class="nav-links">
-                <li><a href="#">Learn</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Download</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Docs</a></li>
-                <li><a href="#">Certification</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#commands">Commands</a></li>
+                <li><a href="#marketplace">Marketplace</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="hero">
-            <h1>Run JavaScript Everywhere</h1>
-            <p>Node.js® is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools, and scripts.</p>
-            <a href="#" class="download-button">Download Node.js (LTS)</a>
-            <p class="version-info">Downloads Node.js v20.15.0<sup>1</sup> with long-term support.<br>
-            Node.js can also be installed via package managers.</p>
-            <a href="#" class="alternative-download">Want new features sooner? Get Node.js v22.4.0<sup>1</sup> instead.</a>
+            <h1>Build and Deploy Software Seamlessly</h1>
+            <p>GIRA empowers developers to craft full-stack applications with ease. Copy commands for every aspect of development and bring your ideas to life.</p>
+            <a href="#" class="cta-button">Get Started</a>
         </section>
-        <section class="code-snippet">
-            <h2>Create an HTTP Server</h2>
-            <pre>
-                <code class="javascript">
-                    // server.mjs
-                    import { createServer } from 'node:http';
-                    
-                    const server = createServer((req, res) => {
-                        res.writeHead(200, { 'Content-Type': 'text/plain' });
-                        res.end('Hello World!\n');
-                    });
-                    
-                    server.listen(3000, '127.0.0.1', () => {
-                        console.log('Listening on 127.0.0.1:3000');
-                    });
-                </code>
-            </pre>
-            <p>Learn more about what Node.js is able to offer with our <a href="#">Learning materials</a>.</p>
+        <section id="commands" class="commands-section">
+            <h2>Copy Commands</h2>
+            <div class="commands">
+                <div class="command-block">
+                    <h3>Front-end</h3>
+                    <pre>
+                        <code id="frontend-command">npx create-react-app my-app</code>
+                    </pre>
+                    <button onclick="copyCommand('frontend-command')">Copy Command</button>
+                </div>
+                <div class="command-block">
+                    <h3>Back-end</h3>
+                    <pre>
+                        <code id="backend-command">npm init express my-backend</code>
+                    </pre>
+                    <button onclick="copyCommand('backend-command')">Copy Command</button>
+                </div>
+                <div class="command-block">
+                    <h3>Database</h3>
+                    <pre>
+                        <code id="database-command">docker run -d -p 5432:5432 postgres</code>
+                    </pre>
+                    <button onclick="copyCommand('database-command')">Copy Command</button>
+                </div>
+                <div class="command-block">
+                    <h3>Host Application</h3>
+                    <pre>
+                        <code id="hosting-command">vercel deploy</code>
+                    </pre>
+                    <button onclick="copyCommand('hosting-command')">Copy Command</button>
+                </div>
+            </div>
+        </section>
+        <section id="marketplace" class="marketplace-section">
+            <h2>Marketplace</h2>
+            <p>List your software or browse existing solutions to buy or sell innovative applications.</p>
+            <a href="#" class="marketplace-button">Visit Marketplace</a>
+        </section>
+        <section id="about" class="about-section">
+            <h2>About GIRA</h2>
+            <p>GIRA is your all-in-one tool for software development, enabling you to design, build, deploy, and sell applications effortlessly.</p>
         </section>
     </main>
     <footer>
-        <p>© OpenJS Foundation</p>
+        <p>© GIRA Software Solutions</p>
         <div class="footer-links">
-            <a href="#">Trademark Policy</a> | 
-            <a href="#">Privacy Policy</a> | 
-            <a href="#">Code of Conduct</a> | 
-            <a href="#">Security Policy</a>
+            <a href="#">Terms of Service</a> |
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Contact Us</a>
         </div>
     </footer>
     <script src="script.js"></script>
