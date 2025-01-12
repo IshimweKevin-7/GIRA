@@ -1,4 +1,8 @@
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Page loaded with dynamic background and supreme styling');
-});
+function copyCommand(id) {
+    const command = document.getElementById(id).textContent;
+    navigator.clipboard.writeText(command).then(() => {
+        alert('Command copied to clipboard!');
+    }).catch(err => {
+        console.error('Error copying command:', err);
+    });
+}
